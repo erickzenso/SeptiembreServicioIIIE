@@ -1,12 +1,23 @@
 package com.idat.SetiembreIIIE.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="productos")
 public class Producto {
 	
+	//@Column(name="id_producto",columnDefinition=String,)
+	@Id
+	//@GeneratedValue(st)
 	private Integer idProducto;
 	private String nombreProducto;
 	private String descripcion;
 	private Double precio;
 	private Integer stock;
+	
 	
 	public Integer getIdProducto() {
 		return idProducto;
